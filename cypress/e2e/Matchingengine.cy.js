@@ -9,7 +9,7 @@ describe('MatchingEngine', () =>{
     it('LaunchWebPage', () =>{
         cy.visit("https://www.matchingengine.com/") //Launching Webpage
 
-        cy.wait(3000);  //Set 5 sec Wait time for page to load
+        cy.wait(5000);  //Set 5 sec Wait time for page to load
         let ite = ["Cue Sheet / AV Work", "Recording", "Bundle", "Advertisement"] //stored the List text in an array to be asserted
         cy.get(".navbar-link.is-active").realHover() //Hover over the Modules menu item 
         cy.get("body > nav:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > a:nth-child(2)").click() //Click on Repertoire Management module
